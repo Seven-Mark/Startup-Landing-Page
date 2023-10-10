@@ -1,8 +1,7 @@
 @font-face {
     font-family: SFPro;
-    src: url(./fonts/SF-Pro-Display-Regular.otf);
+    src: url(fonts/SF-Pro-Display-Regular.otf);
   }
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,17 +32,14 @@ body {
 }
 
 /* Header */
-
 header {
     margin: 0px auto;
     width: 60%;
 }
 
-.menu {
-    display: flex;
-    width: 50%;
+.exp-btn{
+    display: none;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -58,6 +54,7 @@ nav ul {
     list-style-type: none;
     align-items: center;
     width: 100%;
+    gap: 20px;
 }
 
 a {
@@ -70,6 +67,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-right: 20px;
 }
 .logo h1{
     font-size: 14px;
@@ -89,14 +87,18 @@ a {
 nav .float-l{
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 40px;
 }
-
+.separator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 /* Landing Page */
 .lnd-card {
     height: calc(78vh);
-    background-image: url('./imgs/illustration.svg');
+    background-image: url('/imgs/illustration.svg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -110,6 +112,7 @@ nav .float-l{
 }
 .lnd-card h1 {
     line-height: 1.5;
+    text-align: center;
 }
 .gs2-btn {
     width: 180px;
@@ -179,6 +182,7 @@ nav .float-l{
 .services h2{
     font-size: 14px;
     font-weight: 700;
+    text-align: center ;
 }
 .services p{
     font-size: 12px;
@@ -222,7 +226,7 @@ line-height: 40px; /* 250% */
 
 .quotation::before {
     position: absolute;
-    background-image: url('./imgs/quote.svg');
+    background-image: url('imgs/quote.svg');
     background-repeat: no-repeat;
     
     content: "";
@@ -305,6 +309,9 @@ line-height: 40px; /* 250% */
     background-color: #F8F0EA;
     padding: 60px;
 }
+.req p span {
+    display: block;
+}
 .subscribe img {
     
     position: absolute;
@@ -349,7 +356,7 @@ line-height: 40px; /* 250% */
     margin-bottom: 60px;
 }
 .white-bg h1 {
-    font-size: 24px;
+    font-size: 20px;
 }
 .white-bg p {
     font-size: 12px;
@@ -396,6 +403,7 @@ label {
 .text-btn{
     display: flex;
     gap: 15px;
+    padding-bottom: 10px;
 }
 
 form {
@@ -438,4 +446,184 @@ footer li img {
 .social div, .social li{
     padding: 1.5px;
     margin: 0px;
+}
+
+@media (max-width: 1130px) {
+    .text-btn {
+        flex-direction: column;
+    }
+    .s-btn {
+        width: min-content;
+    }
+}
+
+@media (max-width: 1040px) {
+    .books-img {
+        bottom: 0px;
+        right: 10px;
+        width: 150px;
+        height: auto;
+    }
+    .decor1-img {
+        left: 0px;
+        top: 0px;
+        width: 120px;
+    }
+    .decor2-img {
+        top: 0px;
+        width: 120px;
+        left: calc(100% - 150px);
+        height: auto;
+    }
+    .cactus-img {
+        bottom: 0px;
+        left: 40px;
+        width: 70px;
+        height: auto;
+    }
+    .baloon-img{
+        bottom: 50px;
+        height: 270px;
+        width: auto;
+        left: 100px;
+    }
+    nav ul {
+        gap: 10px;
+    }
+    nav .float-l {
+        gap: 0px;
+        /* background-color: red; */
+        justify-content: center;
+    }
+    .gs-btn a{
+        width: 100px;
+        /* background-color: #02073E; */
+
+
+    }
+    .white-bg {
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-around;
+        align-items: s;
+    }
+    .req {
+        min-width: fit-content;
+    }
+    .req p span {
+        display: none;
+
+    }
+  }
+
+@media (max-width: 920px ) {
+    /* .menu li, .float-l {
+        display: none; 
+        transform: rotateY(90deg); */
+    /* } */
+    nav {
+        padding: 0px 100px;
+    }
+    .lnd-card {
+        justify-content: flex-start;
+    }
+    header {
+        width: 90%;
+    }
+    #menu-btn img{
+        width: 25px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+
+    }
+    .logo {
+        float: left;
+        width: calc(100% - 55px) !important;
+        width: min-content;
+    }
+    .separator{
+        /* transform: rotateY(90deg);
+        --angle: 90deg; */
+        width: 100%;
+        display: none;
+    }
+    .float-l {
+        display:  none;
+    }
+    .exp-btn {
+        display: inline-block;
+        /* float: right; */
+        /* width: 100%; */
+    }
+    nav {
+        display: inline-block;
+        width: 100%;
+    }
+    #menu-btn:hover~.separator{
+        display: inline-block;
+
+    }
+    nav .float-l {
+        gap: 40px;
+    }
+    .services>div {
+        flex-direction: column;
+    }
+    .logos {
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .books-img {
+        display: none;
+    }
+    .decor1-img {
+        display: none;
+    }
+    .decor2-img {
+        display: none;
+    }
+    .cactus-img {
+        display: none;
+    }
+    .baloon-img{
+        display: none;
+    }
+    .subscribe {
+        padding: 10px 40px;
+    }
+    .white-bg {
+        width: 100%;
+    }
+    .logos {
+        gap: 70px;
+        flex-wrap: wrap;
+    }
+    .logos img {
+        width: 90px;
+    }
+    .content{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services {
+        flex-direction: column;
+
+    }
+    .services p{
+        text-align: center;
+    }
+    .s-details{
+        text-align: center;
+    }
+    footer {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
 }
