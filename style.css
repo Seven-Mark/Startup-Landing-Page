@@ -98,7 +98,7 @@ nav .float-l{
 /* Landing Page */
 .lnd-card {
     height: calc(78vh);
-    background-image: url('/imgs/illustration.svg');
+    background-image: url('./imgs/illustration.svg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -226,7 +226,7 @@ line-height: 40px; /* 250% */
 
 .quotation::before {
     position: absolute;
-    background-image: url('imgs/quote.svg');
+    background-image: url('./imgs/quote.svg');
     background-repeat: no-repeat;
     
     content: "";
